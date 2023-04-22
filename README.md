@@ -23,6 +23,54 @@
 - [Problemas e Soluções](#problemas__solucoes)
 - [Aulas](#aulas)
 
+&nbsp;
+
+---
+
+# Problemas e Soluções -> <div id='problemas__solucoe'></div>
+
+## Numeros arredondados:
+> Para a logica do MergeSort é necessario que o array seja dividido pela metade, mas os indeicies ficarim quebrados em caso de numeros impares. Para que isso não ocorra foi usado o metodo `Math.floor` para que os resultados da divisão sejam arredondados para baixo.
+~~~JavaScript
+  // Neste caso pegamos o tamanho do array dividimos pela metade e aredondamos o resultado.
+  const meio = Math.floor(array.length /2);
+~~~
+
+&nbsp;
+
+## Slice:
+> O metodo slice pega uma parte do array, onde o primeiro parametro é o primeiro elemento do novo array e o segundo é onde ele deve cortar.
+~~~JavaScript
+  const parte1 = array.slice(0, meio);
+  const parte2 = array.slice(meio, array.length)
+~~~
+
+&nbsp;
+
+## Recursivo:
+> Como precisamos que os arrays resultantes da função sejam divididos ate sucessivamente ate restarem arrays de dois itens, usamos o metodo mergeSorte chamando ele mesmo para cada uma das listas. Isso chama-se recursividade.
+~~~JavaScript
+  function mergeSorte(array) {
+      if (array.length > 1) {
+          const meio = Math.floor(array.length / 2);
+          // O metodo slice pega uma parte do array, onde o primeiro parametro é o primeiro elemento do novo array e o segundo é onde ele deve cortar.
+          const parte1 = mergeSorte(array.slice(0, meio));
+          const parte2 = mergeSorte(array.slice(meio, array.length))
+      }
+  }
+~~~
+
+&nbsp;
+
+---
+
+# Projeto -> <div id='projeto'></div>
+
+## MergeSorte->
+> A ideia por tras do Merge Sorte se baseia no conceito "Dividir pra conquistar", onde separamos partes menores e isoladas do codigo pra ir atacando aos poucos.
+
+&nbsp;
+
 ---
 
 # Aulas -> <div id='aulas'></div>
