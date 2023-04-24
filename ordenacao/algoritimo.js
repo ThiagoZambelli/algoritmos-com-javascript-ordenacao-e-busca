@@ -1,4 +1,4 @@
-const { edFolha, edGalho } = require('./arrays.js');
+const { edFolha, edGalho } = require('./listasDeLivros.js');
 
 function juntaListas(lista1, lista2) {
 

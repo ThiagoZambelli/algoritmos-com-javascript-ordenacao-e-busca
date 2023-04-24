@@ -29,6 +29,14 @@
 
 # Problemas e Soluções -> <div id='problemas__solucoe'></div>
 
+## `indexOf()`:
+> Metodo do JavaScript com a função de pegar um elemento do array com o index indicado.
+~~~JavaScript  
+  array.indexOf(indiceDoElementoDesejado)
+~~~
+
+&nbsp;
+
 ## Numeros arredondados:
 > Para a logica do MergeSort é necessario que o array seja dividido pela metade, mas os indeicies ficarim quebrados em caso de numeros impares. Para que isso não ocorra foi usado o metodo `Math.floor` para que os resultados da divisão sejam arredondados para baixo.
 ~~~JavaScript
@@ -71,8 +79,13 @@
 
 # Projeto -> <div id='projeto'></div>
 
-## MergeSorte->
-> A ideia por tras do Merge Sorte se baseia no conceito "Dividir pra conquistar", onde separamos partes menores e isoladas do codigo pra ir atacando aos poucos.
+## MergeSort->
+> A ideia por tras do Merge Sort se baseia no conceito "Dividir pra conquistar", onde separamos partes menores e isoladas do codigo pra ir atacando aos poucos.
+
+&nbsp;
+
+## QuickSort->
+> Consiste em utilizar um Pivo para execução da logica (neste caso a organização do Array)!
 
 &nbsp;
 
