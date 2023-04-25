@@ -51,6 +51,11 @@
 
 &nbsp;
 
+## stack overflow:
+> Erro que pode ocorrer mais comumente em loops infinitos, ou em caso de recursividade quando não estabelecido uma parada pra função. No caso da nossa busca, o `Estouro de Pilha` aconteceu ao buscar um valor que não existia no array. Nos corrigimos criando um if que limitava o campode de `de` a ser menos que o de `ate` (respectivamente o inicio e fim da nossa busca).
+
+&nbsp;
+
 ## Slice:
 > O metodo slice pega uma parte do array, onde o primeiro parametro é o primeiro elemento do novo array e o segundo é onde ele deve cortar.
 ~~~JavaScript
@@ -112,3 +117,10 @@
 - Após posicionar um elemento pivô em um array, desenvolvemos um código em JavaScript que percorre uma lista e separa todos os elementos entre maiores e menores que o pivô, através da função encontraMenores();
 - A partir do conceito de elemento pivô, entendemos o funcionamento do algoritmo de ordenação quick sort, fazendo mais simulações e testes;
 - Após entendermos o algoritmo, implementamos o código utilizando JavaScript e reaproveitando funções e conceitos das aulas anteriores, como a função trocaLugar() e a recursão.
+
+## Aula 4 -
+
+- Aplicamos novamente o paradigma “dividir para conquistar” para desenvolver o algoritmo de busca chamado busca binária;
+- Utilizamos recursão para manipular um array ordenado e buscar um elemento, seguindo o fluxo da busca binária que foi visto nas simulações e testes;
+- Desenvolvemos código em JavaScript para implementar o algoritmo de busca binária;
+- Continuamos a prática de funções recursivas, vendo o funcionamento do “caso base”, que pode ser considerada como a condição de parada de uma função recursiva.
