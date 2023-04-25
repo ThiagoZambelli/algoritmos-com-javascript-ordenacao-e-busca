@@ -1,22 +1,39 @@
 const listaLivros = require('../listaDeLivros');
+const trocaLugar = require('./encontraMenores');
 
-function encontraMenores(pivo, array) {
-    let menores = 0;
-
-    for (let atual = 0; atual < array.length; atual++) {
-        let itemAtual = array[atual];
-        if (itemAtual.preco < pivo.preco) {
-            menores++;
+function quickSort(array, esquerda, direita) {
+    if (array.length > 1) {
+        let indiceAtual = particiona(array, esquerda, direita);
+        if (esquerda < indiceAtual - 1) {
+            quickSort(array, esquerda, indiceAtual - 1)
+        }
+        if(indiceAtual < direita){
+            quickSort(array, indiceAtual, direita)
         }
     }
-    trocaLugar(array, array.indexOf(pivo), menores)
     return array;
 }
 
-function trocaLugar(array, de, para) {
-    const item1 = array[de];
-    const item2 = array[para];
+function particiona(array, esquerda, direita) {
+    let pivo = array[Math.floor((esquerda + direita) / 2)]
+    let atualEsq = esquerda;
+    let atualDir = direita;
 
-    array[para] = item1;
-    array[de] = item2;
+    while (atualEsq <= atualDir) {
+        while (array[atualEsq].preco < pivo.preco) {
+            atualEsq++
+        }
+        while (array[atualDir].preco > pivo.preco) {
+            atualDir--
+        }
+
+        if (atualEsq <= atualDir) {
+            trocaLugar(array, atualEsq, atualDir);
+            atualDir--
+            atualEsq++
+        }
+    }
+    return atualEsq;
 }
+
+console.log(quickSort(listaLivros, 0, listaLivros.length - 1))
